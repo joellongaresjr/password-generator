@@ -31,11 +31,12 @@ var length = prompt("What's the desired length of your random password? *Must be
   var uppercaseChar = confirm("Apply uppercase letters");
   var numbersChar = confirm("Apply Numbers?");
   var specialChar = confirm("Apply Special Characters? (hint: +,-,!)"); 
+  
 
   // create an if statement for when the user selects the criteria for his/her desired password.
   // *strings - applying confirmation from the user will create value for the strings* i think?
 
-  if (lowercaseChar) { 
+  if(lowercaseChar) { 
     characters += "abcdefghijklmnopqrstuvwxyz";
   }
 
@@ -50,18 +51,20 @@ var length = prompt("What's the desired length of your random password? *Must be
   if(specialChar) {
     characters += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
   }
-  
-   var randomPassword = '';
-   
- for (i=0; i<length; ++i) {
-   var random = Math.floor(Math.random() * characters.length)
-   randomPassword += characters.charAt(random);
- }
 
- return randomPassword;
+  // created variable to coorelate to the empty string 
+  // the application of this loop will assign each character in the characters variable 
+  var randomPass = ''; 
+  for (i=0; i<length; ++i) {
+    // variable is equal to an equation to gives a 
+    var random = Math.floor(Math.random() * characters.length)
+  
+    randomPass += characters.charAt(random);
+  
+  }
+ 
+  return randomPass;
 }
   
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
