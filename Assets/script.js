@@ -59,12 +59,12 @@ var length = prompt("What's the desired length of your random password? *Must be
     // variable is equal to an equation to gives a 
     var random = Math.floor(Math.random() * characters.length)
   
-    randomPass += characters.charAt(random);
+    randomPass += characters.charCodeAt(random);
   
   }
  
   return randomPass;
 }
-  
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
