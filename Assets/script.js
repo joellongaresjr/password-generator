@@ -56,6 +56,8 @@ for (i=0; i <length; i++) {
   
 }
 
+return generatePassword
+
 
 
 // Add event listener to generate button
