@@ -19,9 +19,10 @@ var length = prompt("What's the desired length of your random password? *Must be
   // creat else statement for when they complete 
   if (length < 8 || length > 128) {
     alert("failure. *hint: must be more than 8 characters.");
-    return "refresh and try again" ; 
-  } else } 
+    return "refresh and try again"; 
+  } else {
   alert("Your password length: " + length) ;
+}
 
   // create variables for all the characters that will be used in generator 
   // create variables for the user upon choice of confirm
@@ -49,15 +50,17 @@ var length = prompt("What's the desired length of your random password? *Must be
   if(specialChar) {
     characters += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
   }
-
-
-for (i=0; i <length; i++) {
-  var randomIndex = (Math.floor(Math.random) * characters.length)
   
+   var randomPassword = '';
+   
+ for (i=0; i<length; ++i) {
+   var random = Math.floor(Math.random() * characters.length)
+   randomPassword += characters.charAt(random);
+ }
+
+ return randomPassword;
 }
-
-return generatePassword
-
+  
 
 
 // Add event listener to generate button
