@@ -54,12 +54,16 @@ var length = prompt("What's the desired length of your random password? *Must be
 
   // created variable to coorelate to the empty string 
   // the application of this loop will assign each character in the characters variable 
+  // ask tutor if what happens if they press cancel for all charactes regarding loop. what's a better  if statement?
   var randomPass = ''; 
   for (i=0; i<length; ++i) {
-    // variable is equal to an equation to gives a 
-    var random = Math.floor(Math.random() * characters.length)
   
-    randomPass += characters.charCodeAt(random);
+    var random = Math.floor(Math.random() * characters.length)
+  // inside the loop the following code generates a random index to select a charcter from the 'charcters string'
+    randomPass += characters.charAt(random);
+  //this line appends a character to the "randomPass" string. 
+  // we use chart.At function to retrieve the character at the 'random' index from the 'characters' string. and adds it to the 'randomPass' string
+  
   
   }
  
